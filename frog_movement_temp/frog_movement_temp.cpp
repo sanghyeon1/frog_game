@@ -63,10 +63,11 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 {
 	HDC hdc, memdc;
 	PAINTSTRUCT ps;
-	static HBITMAP hBitmap46, hBitmap79;
+	static HBITMAP hBitmap46, hBitmap79, hBitmap1012, hBitmap_TONGUE_L1_L, hBitmap_TONGUE_L1_R;
+	static HBITMAP old_bitmap;
 	static int x = 100, y = 200;
 	static bool flag[5];
-	static char direct = 'n';
+	static char direct = 'n', space = 'n', old_drect = 'n';
 	static int xPos;
 
 	static HBITMAP RunBit_L[3], RunBit_R[3];
@@ -88,6 +89,12 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 			MAKEINTRESOURCE(LIFE46));
 		hBitmap79 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
 			MAKEINTRESOURCE(LIFE79));
+		hBitmap1012 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
+			MAKEINTRESOURCE(LIFE1012));
+		hBitmap_TONGUE_L1_R = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
+			MAKEINTRESOURCE(TONGUE_L1_R));
+		hBitmap_TONGUE_L1_L = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
+			MAKEINTRESOURCE(TONGUE_L1_L));
 		break;
 	case WM_TIMER:
 		if (direct == 'L') {
@@ -99,21 +106,37 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		hdc = BeginPaint(hwnd, &ps);
 		memdc = CreateCompatibleDC(hdc);
 		SelectObject(memdc, hBitmap79);
+
 		if (direct == 'L') {			
+			old_drect = 'L';
 			SelectObject(memdc, RunBit_L[count]);
 			StretchBlt(hdc, x, y, 600, 600, memdc, 0, 0, 1300, 1300, SRCCOPY); //dest, w/h, src
 			DeleteDC(memdc);
 			count++;
-			count = count % 3;
-			
+			count = count % 3;		
 		}			
-		else if (direct == 'R') {
+		if (direct == 'R') {
+			old_drect = 'R';
 			SelectObject(memdc, RunBit_R[count]);
 			StretchBlt(hdc, x, y, 600, 600, memdc, 0, 0, 1300, 1300, SRCCOPY); //dest, w/h, src
 			DeleteDC(memdc);
 			count++;
-			count = count % 3;
+			count = count % 3;				
+		}	
+
+		if (space == 'O') {
+			if (old_drect == 'L') {
+				SelectObject(memdc, hBitmap_TONGUE_L1_L);
+				StretchBlt(hdc, x - 80, y, 600, 600, memdc, 0, 0, 1300, 1300, SRCCOPY); //dest, w/h, src
+				DeleteDC(memdc);
+			}
+			else if (old_drect == 'R') {
+				SelectObject(memdc, hBitmap_TONGUE_L1_R);
+				StretchBlt(hdc, x, y, 600, 600, memdc, 0, 0, 1300, 1300, SRCCOPY); //dest, w/h, src
+				DeleteDC(memdc);
+			}			
 		}
+
 		StretchBlt(hdc, x, y, 600, 600, memdc, 0, 0, 1300, 1300, SRCCOPY); //dest, w/h, src
 		DeleteDC(memdc);
 		EndPaint(hwnd, &ps);
@@ -122,14 +145,33 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		switch (wParam) {
 		case VK_LEFT:
 			direct = 'L';
-			x -= 10;
-			
+			space = 'x';
+			x -= 10;			
 			break;
+
 		case VK_RIGHT:
 			direct = 'R';
+			space = 'x';
 			x += 10;
 			break;
 
+		case VK_SPACE:
+			space = 'O';
+			break;
+		}
+		InvalidateRgn(hwnd, NULL, TRUE);
+		break;
+	case WM_KEYUP:
+		switch (wParam) {
+		case VK_SPACE:
+			space = 'X';
+			break;
+		case VK_LEFT:
+			direct = 'n';
+			break;
+		case VK_RIGHT:
+			direct = 'n';
+			break;
 		}
 		InvalidateRgn(hwnd, NULL, TRUE);
 		break;

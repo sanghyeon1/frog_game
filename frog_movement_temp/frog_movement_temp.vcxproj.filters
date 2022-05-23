@@ -45,9 +45,6 @@
     <Image Include="frog_movement_temp.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\LIFE46.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
     <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\LIFE79.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
@@ -67,6 +64,24 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_3R.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\LIFE1012.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\LIFE46.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\GameOver.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\LIFE13.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\TONGUE_L1_L.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\TONGUE_L1_R.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>
