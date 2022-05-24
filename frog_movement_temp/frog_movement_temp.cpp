@@ -2,8 +2,6 @@
 #include <TCHAR.H>
 #include "resource.h"
 
-void move_ani(int xPos, int yPos, HDC hdc);
-
 LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam);
 
 HINSTANCE hInst;
@@ -63,15 +61,16 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 {
 	HDC hdc, memdc;
 	PAINTSTRUCT ps;
-	static HBITMAP hBitmap46, hBitmap79, hBitmap1012, hBitmap_TONGUE_L1_L, hBitmap_TONGUE_L1_R;
-	static HBITMAP old_bitmap;
+	static HBITMAP hBitmap13, hBitmap46, hBitmap79, hBitmap1012, hBitmap_TONGUE_L1_L, hBitmap_TONGUE_L1_R,
+		hBitmap_GameOver;
+	static HBITMAP old_bitmap, life_bitmap;
 	static int x = 100, y = 200;
 	static bool flag[5];
 	static char direct = 'n', space = 'n', old_drect = 'n';
 	static int xPos;
 
 	static HBITMAP RunBit_L[3], RunBit_R[3];
-	static int count;
+	static int count, life = 1;
 	int  i;
 
 	
@@ -85,6 +84,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		RunBit_R[1] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(MOVE_2R));
 		RunBit_R[2] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(MOVE_3R));
 
+		hBitmap13 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
+			MAKEINTRESOURCE(LIFE13));
 		hBitmap46 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
 			MAKEINTRESOURCE(LIFE46));
 		hBitmap79 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
@@ -95,6 +96,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 			MAKEINTRESOURCE(TONGUE_L1_R));
 		hBitmap_TONGUE_L1_L = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
 			MAKEINTRESOURCE(TONGUE_L1_L));
+		hBitmap_GameOver = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance,
+			MAKEINTRESOURCE(GAMEOVER));
 		break;
 	case WM_TIMER:
 		if (direct == 'L') {
@@ -105,8 +108,21 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 	case WM_PAINT:
 		hdc = BeginPaint(hwnd, &ps);
 		memdc = CreateCompatibleDC(hdc);
-		SelectObject(memdc, hBitmap79);
 
+		// 생명력에 따라 다른 비트맵 이미지 출력.
+		if (life >= 1 && life <= 3)
+			SelectObject(memdc, hBitmap13);
+		else if(life >= 4 && life <= 6)
+			SelectObject(memdc, hBitmap46);
+		else if (life >= 7 && life <= 9)
+			SelectObject(memdc, hBitmap79);
+		else if (life >= 10 && life <= 12)
+			SelectObject(memdc, hBitmap1012);		
+		else
+			SelectObject(memdc, hBitmap_GameOver);
+
+		// 방향키 좌측일 때와 우측일 때 비트맵 출력 두 조건 모두 실행될 필요가 있어서
+		// if로만 구현.
 		if (direct == 'L') {			
 			old_drect = 'L';
 			SelectObject(memdc, RunBit_L[count]);
@@ -124,6 +140,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 			count = count % 3;				
 		}	
 
+		// 스페이스바가 눌렸을 때 좌, 우측에 따른 비트맵 출력.
 		if (space == 'O') {
 			if (old_drect == 'L') {
 				SelectObject(memdc, hBitmap_TONGUE_L1_L);
@@ -141,7 +158,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		DeleteDC(memdc);
 		EndPaint(hwnd, &ps);
 		break;
-	case WM_KEYDOWN:
+	case WM_KEYDOWN:	// 키를 눌렀을 때.
 		switch (wParam) {
 		case VK_LEFT:
 			direct = 'L';
@@ -161,7 +178,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		}
 		InvalidateRgn(hwnd, NULL, TRUE);
 		break;
-	case WM_KEYUP:
+	case WM_KEYUP:		//키를 떼었을 때.
 		switch (wParam) {
 		case VK_SPACE:
 			space = 'X';
