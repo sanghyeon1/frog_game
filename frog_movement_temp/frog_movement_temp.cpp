@@ -55,6 +55,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 }
 
+int life = 5;
+
 LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 	WPARAM wParam, LPARAM lParam)
 	//	WinDef.h 에서 정의
@@ -73,7 +75,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 	static int xPos;
 
 	static HBITMAP RunBit_L[3], RunBit_R[3], RunBit_LB[3], RunBit_RB[3];
-	static int count, life = 1;
+	static int count;
 	int  i;
 	int bx, by;
 
@@ -82,35 +84,35 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 
 	switch (iMsg) {
 	case WM_CREATE:
-		RunBit_L[0] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_1_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_L[1] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_2_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_L[2] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_3_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_R[0] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_1R_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_R[1] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_2R_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_R[2] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_3R_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
+		RunBit_L[0] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_1L_B));
+		RunBit_L[1] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_2L_B));
+		RunBit_L[2] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_3L_B));
+		RunBit_R[0] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_1R_B));
+		RunBit_R[1] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_2R_B));;
+		RunBit_R[2] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_3R_B));
 
-		RunBit_LB[0] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_1_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_LB[1] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_2_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_LB[2] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_3_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_RB[0] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_1R_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_RB[1] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_2R_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		RunBit_RB[2] = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\MOVE_3R_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
+		RunBit_LB[0] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_1L));
+		RunBit_LB[1] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_2L));
+		RunBit_LB[2] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_3L));
+		RunBit_RB[0] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_1R));
+		RunBit_RB[1] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_2R));
+		RunBit_RB[2] = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_MOVE_3R));
 
-		hBitmap13 = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE13_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap46 = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE46_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap79 = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE79_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap1012 = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE1012_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap_TONGUE_L1_R = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\TONGUE_L1_R_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap_TONGUE_L1_L = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\TONGUE_L1_L_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap_GameOver = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\GAMEOVER_BLACK2.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
+		hBitmap13 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE13_B));
+		hBitmap46 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE46_B));
+		hBitmap79 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE79_B));
+		hBitmap1012 = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE1012_B));
+		hBitmap_TONGUE_L1_R = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_TONGUE_R1_B));
+		hBitmap_TONGUE_L1_L = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_TONGUE_L1_B));
+		hBitmap_GameOver = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_GameOver));
 
-		hBitmap13B = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE13_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap46B = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE46_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap79B = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE79_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap1012B = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\LIFE1012_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap_TONGUE_L1_RB = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\TONGUE_L1_R_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap_TONGUE_L1_LB = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\TONGUE_L1_L_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
-		hBitmap_GameOverB = (HBITMAP)LoadImage(NULL, TEXT("C:\\Users\\psh99\\source\\repos\\frog_movement_temp\\frog_movement_temp\\x64\\GAMEOVER_BLACK.bmp"), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_CREATEDIBSECTION);
+		hBitmap13B = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE13));
+		hBitmap46B = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE46));
+		hBitmap79B = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE79));
+		hBitmap1012B = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_LIFE1012));
+		hBitmap_TONGUE_L1_RB = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_TONGUE_R1));
+		hBitmap_TONGUE_L1_LB = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_TONGUE_L1));
+		hBitmap_GameOverB = (HBITMAP)LoadBitmap(((LPCREATESTRUCT)lParam)->hInstance, MAKEINTRESOURCE(BIT_GameOver_B));
 		break;
 	case WM_TIMER:
 		if (direct == 'L') {
@@ -123,18 +125,27 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		memdc = CreateCompatibleDC(hdc);
 
 		// 생명력에 따라 다른 비트맵 이미지 출력.
-		if (life >= 1 && life <= 3)
-		{
+		if (life >= 1 && life <= 3) {
+			GetObject(hBitmap13, sizeof(BITMAP), &bit);
 			SelectObject(memdc, hBitmap13);
-		}
-		else if (life >= 4 && life <= 6)
+		}			
+		else if (life >= 4 && life <= 6) {
+			GetObject(hBitmap46, sizeof(BITMAP), &bit);
 			SelectObject(memdc, hBitmap46);
-		else if (life >= 7 && life <= 9)
+		}
+		else if (life >= 7 && life <= 9) {
+			GetObject(hBitmap79, sizeof(BITMAP), &bit);
 			SelectObject(memdc, hBitmap79);
-		else if (life >= 10 && life <= 12)
+		}			
+		else if (life >= 10 && life <= 12) {
+			GetObject(hBitmap1012, sizeof(BITMAP), &bit);
 			SelectObject(memdc, hBitmap1012);
-		else
+		}			
+		else {
+			GetObject(hBitmap_GameOver, sizeof(BITMAP), &bit);
 			SelectObject(memdc, hBitmap_GameOver);
+		}
+			
 
 		// 방향키 좌측일 때와 우측일 때 비트맵 출력 두 조건 모두 실행될 필요가 있어서
 		// if로만 구현.
@@ -194,13 +205,43 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 				DeleteDC(memdc);
 			}
 		}
-		GetObject(hBitmap13B, sizeof(BITMAP), &bit);
+		
 		bx = bit.bmWidth;
 		by = bit.bmHeight;
-		SelectObject(memdc, hBitmap13);
-		StretchBlt(hdc, x, y, 55, 55, memdc, 0, 0, bx, by, SRCAND);
-		SelectObject(memdc, hBitmap13B);
-		StretchBlt(hdc, x, y, 55, 55, memdc, 0, 0, bx, by, SRCPAINT);
+		
+		if (life >= 1 && life <= 3) {
+			StretchBlt(hdc, x, y, 55, 55, memdc, 0, 0, bx, by, SRCAND);
+			GetObject(hBitmap13B, sizeof(BITMAP), &bit);
+			SelectObject(memdc, hBitmap13B);
+			StretchBlt(hdc, x, y, 55, 55, memdc, 0, 0, bx, by, SRCPAINT);
+		}
+
+		else if (life >= 4 && life <= 6) {
+			StretchBlt(hdc, x, y, 55, 55, memdc, 0, 0, bx, by, SRCAND);
+			GetObject(hBitmap46B, sizeof(BITMAP), &bit);
+			SelectObject(memdc, hBitmap46B);
+			StretchBlt(hdc, x, y, 55, 55, memdc, 0, 0, bx, by, SRCPAINT);
+		}
+		else if (life >= 7 && life <= 9) {
+			StretchBlt(hdc, x, y, 60, 55, memdc, 0, 0, bx, by, SRCAND);
+			GetObject(hBitmap79B, sizeof(BITMAP), &bit);
+			SelectObject(memdc, hBitmap79B);
+			StretchBlt(hdc, x, y, 60, 55, memdc, 0, 0, bx, by, SRCPAINT);
+		}
+
+		else if (life >= 10 && life <= 12) {
+			StretchBlt(hdc, x, y, 65, 60, memdc, 0, 0, bx, by, SRCAND);
+			GetObject(hBitmap1012B, sizeof(BITMAP), &bit);
+			SelectObject(memdc, hBitmap1012B);
+			StretchBlt(hdc, x, y, 65, 60, memdc, 0, 0, bx, by, SRCPAINT);
+		}
+		else {
+			StretchBlt(hdc, x, y, 80, 80, memdc, 0, 0, bx, by, SRCAND);
+			GetObject(hBitmap_GameOverB, sizeof(BITMAP), &bit);
+			SelectObject(memdc, hBitmap_GameOverB);
+			StretchBlt(hdc, x, y, 80, 80, memdc, 0, 0, bx, by, SRCPAINT);
+		}
+		
 		DeleteDC(memdc);
 		EndPaint(hwnd, &ps);
 		break;
@@ -220,7 +261,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 
 		case VK_SPACE:
 			space = 'O';
-
+			life += 1;
 			
 			break;
 		}
@@ -245,4 +286,30 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg,
 		break;
 	}
 	return DefWindowProc(hwnd, iMsg, wParam, lParam);
+}
+
+void collision_check(int item_index) {
+	switch (item_index) {
+
+	case 0:
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	case 5:
+		break;
+	case 6:
+		break;
+	case 7:
+		break;
+	case 8:
+		break;
+	case 9:
+		break;
+	}
 }
