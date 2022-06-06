@@ -45,43 +45,166 @@
     <Image Include="frog_movement_temp.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\LIFE79.bmp">
+    <Image Include="x64\frog_bit\BIT_GameOver.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_1.bmp">
+    <Image Include="x64\frog_bit\BIT_GameOver_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_2.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE13.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_3.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE13_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_1R.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE46.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_2R.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE46_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\MOVE_3R.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE79.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="x64\LIFE1012.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE79_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="..\..\..\..\OneDrive\바탕 화면\상현\수업 자료 및 과제\3-3 윈도우프로그래밍 수업자료\윈프 프로젝트 관련\개구리\LIFE46.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE1012.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="x64\GameOver.bmp">
+    <Image Include="x64\frog_bit\BIT_LIFE1012_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="x64\LIFE13.bmp">
+    <Image Include="x64\frog_bit\BIT_MOVE_1L.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="x64\TONGUE_L1_L.bmp">
+    <Image Include="x64\frog_bit\BIT_MOVE_1L_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="x64\TONGUE_L1_R.bmp">
+    <Image Include="x64\frog_bit\BIT_MOVE_1R.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_1R_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_2L.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_2L_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_2R.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_2R_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_3L.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_3L_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_3R.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_MOVE_3R_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_L1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_L1_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_L2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_L2_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_L3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_L3_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_R1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_R1_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_R2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_R2_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_R3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\frog_bit\BIT_TONGUE_R3_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_ALCHOL.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_ALCHOL_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_BAT.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_BAT_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_CRICKET.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_CRICKET_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_DNA.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_DNA_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_DOPPING.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_DOPPING_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_FLY.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_FLY_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_ROCK.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_ROCK_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_SLIME.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_SLIME_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_SNAKE.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_SNAKE_B.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_WORM.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="x64\item_bit\BIT_ITEM_WORM_B.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

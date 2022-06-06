@@ -1,0 +1,45 @@
+﻿  frog_movement_temp.cpp
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(109,13): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(193,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(193,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(195,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(195,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(207,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(207,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(209,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(209,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(221,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(221,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(223,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(223,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(235,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(235,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(237,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(237,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(249,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(249,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(251,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(251,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(263,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(263,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(265,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(265,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(277,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(277,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(279,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(279,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(291,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(291,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(293,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(293,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(305,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(305,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(307,49): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(307,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(319,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(319,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(321,50): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(321,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(87,14): warning C4101: 'ix' :참조되지 않은 지역 변수입니다.
+C:\Users\psh99\source\repos\frog_movement_temp\frog_movement_temp\frog_movement_temp.cpp(87,18): warning C4101: 'iy' :참조되지 않은 지역 변수입니다.
+  frog_movement_temp.vcxproj -> C:\Users\psh99\source\repos\frog_movement_temp\x64\Debug\frog_movement_temp.exe
